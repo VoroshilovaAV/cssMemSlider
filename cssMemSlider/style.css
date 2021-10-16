@@ -12,3 +12,26 @@
 body {
   background-image: url(assets/img/back.jpg);
 }
+
+.container {
+    height: 60em;
+	margin: 300px auto 0;
+	position: calc(100% - 50px);
+	width: 95em;
+}
+
+.cards_slider {
+	background-color: #ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;   
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.container > input {
+	display: none;
+}
