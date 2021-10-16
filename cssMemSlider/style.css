@@ -1,0 +1,254 @@
+/*properties for all browsers*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*background picture*/
+body {
+  background-image: url(assets/img/back.jpg);
+}
+
+.container input {
+  display: none;
+}
+
+/*slider position*/
+#cards_slider {
+  position: relative;
+  text-align: center;
+  top: 10em;
+  margin: 0 auto;
+}
+
+/*position of the pictures from each other*/
+#slides article {
+  width: 20%;
+  float: left;
+}
+
+/*total block size with images*/
+#slides .image {
+  width: 350em;
+  line-height: 0;
+}
+
+#overflow {
+  width: 70em;
+  overflow: hidden;
+}
+
+article img {
+  width: 70em;
+}
+
+#size:checked ~ #cards_slider {
+  max-width: 70em;
+}
+
+label,
+a {
+  cursor: pointer;
+}
+
+/*picture position when the switch is activated*/
+#point1:checked ~ #slides .image {
+  margin-left: 0;
+}
+
+#point2:checked ~ #slides .image {
+  margin-left: -100%;
+}
+
+#point3:checked ~ #slides .image {
+  margin-left: -200%;
+}
+
+#point4:checked ~ #slides .image {
+  margin-left: -300%;
+}
+
+#active label {
+  border-radius: 50%;
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.3em;
+  background: rgb(150, 145, 145);
+}
+
+/* location of the block with switches */
+#active {
+  margin: 3% 0 0 0;
+  position: relative;
+  left: 91%;
+  text-align: center;
+}
+
+#active label:hover {
+  background: #d476ff;
+  border-color: #777 !important;
+}
+
+/*expanding the area of pressing*/
+span {
+  padding: 25px 10px;
+}
+
+/*the color of the active label when he is activated*/
+#point1:checked ~ .flex_cont #active label:nth-child(1),
+#point2:checked ~ .flex_cont #active label:nth-child(2),
+#point3:checked ~ .flex_cont #active label:nth-child(3),
+#point4:checked ~ .flex_cont #active label:nth-child(4) {
+  background: #d476ff;
+  border-color: #d476ff !important;
+}
+
+/*slide animation*/
+#slides .image {
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: black;
+}
+
+.flex_cont {
+  display: flex;
+}
+
+/*position of the sign from each other*/
+#sign {
+  display: block;
+  position: relative;
+  top: 25px;
+  right: 100px;
+}
+
+#sign h3 {
+  width: 22%;
+  float: left;
+  text-align: left;
+}
+
+#overflow2 {
+  display: inline-block;
+  position: relative;
+  margin: 3% 0 0 0;
+  position: relative;
+  left: 0%;
+  width: 220px;
+  height: 50px;
+  overflow: hidden;
+}
+
+/*total block size with signs*/
+#sign .text_block {
+  width: 1000px;
+  line-height: 0;
+}
+
+/*text position when the switch is activated*/
+#point1:checked ~ .flex_cont #sign .text_block {
+  margin-left: 0;
+}
+
+#point2:checked ~ .flex_cont #sign .text_block {
+  margin-left: -100%;
+}
+
+#point3:checked ~ .flex_cont #sign .text_block {
+  margin-left: -200%;
+}
+
+#point4:checked ~ .flex_cont #sign .text_block {
+  margin-left: -300%;
+}
+
+/*text animation*/
+.flex_cont #sign .text_block {
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media (max-width: 320px) {
+  /*slider position*/
+  #cards_slider {
+    top: 5em;
+  }
+
+  /*position of the pictures from each other*/
+  #slides article {
+    width: 9%;
+    position: relative;
+    right: 0.5em;
+  }
+
+  /*total block size with images*/
+  #slides .image {
+    width: 913vw;
+  }
+
+  #overflow {
+    width: 80vw;
+  }
+
+  article img {
+    width: 80vw;
+  }
+
+  #size:checked ~ #cards_slider {
+    max-width: 80vw;
+  }
+
+  #point3:checked ~ #slides .image {
+    margin-left: -205%;
+  }
+
+  #point4:checked ~ #slides .image {
+    margin-left: -305%;
+  }
+
+  #active label {
+    border-radius: 50%;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0;
+    margin-left: -2px;
+    background: rgb(150, 145, 145);
+  }
+
+  /* location of the block with switches */
+  #active {
+    margin: 8% 0 0 0;
+    position: relative;
+    left: 42%;
+    text-align: center;
+  }
+
+  /*expanding the area of pressing*/
+  span {
+    padding: 20px 10px;
+  }
+
+  .text {
+    font-size: 8px;
+  }
+
+  /*position of the sign from each other*/
+  #sign {
+    display: block;
+    position: relative;
+    top: 40px;
+    right: 35px;
+  }
+}
