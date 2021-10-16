@@ -6,32 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cssMemSlider</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<input checked type="radio" name="contain" id="size">
-			<article id="cards_slider">
-					<input checked type="radio" name="slider" id="point1">
-					<input type="radio" name="slider" id="point2">
-					<input type="radio" name="slider" id="point3">
-					<input type="radio" name="slider" id="point4">				
-				<div id="slides">
-					<div id="overflow">
-						<div class="image">
-							<article><img src="assets/img/1.jpg"></article>
-							<article><img src="assets/img/2.jpg"></article>
-							<article><img src="assets/img/3.jpg"></article>
-							<article><img src="assets/img/4.jpg"></article>							
-						</div>
-					</div>
-				</div>				
-				<div id="active">
-					<label for="point1"></label>
-					<label for="point2"></label>
-					<label for="point3"></label>
-					<label for="point4"></label>					
-				</div>
-			</article>
+            <input type="radio" name="contain" id="size" checked>
+            <article id="cards_slider">
+                        <input type="radio" name="slider" id="point1" checked>
+                        <input type="radio" name="slider" id="point2">
+                        <input type="radio" name="slider" id="point3">
+                        <input type="radio" name="slider" id="point4">				
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="image">
+                                <article><img src="assets/img/1.jpg"></article>
+                                <article><img src="assets/img/2.jpg"></article>
+                                <article><img src="assets/img/3.jpg"></article>
+                                <article><img src="assets/img/4.jpg"></article>							
+                            </div>
+                        </div>
+                    </div>	  
+                    <div class="flex_cont">             			
+                        <div id="active">
+                            <label for="point1"></label>
+                            <label for="point2"></label>
+                            <label for="point3"></label>
+                            <label for="point4"></label>					
+                        </div>
+                        <div id="sign">
+                            <div id="overflow2">
+                                <div class="text_block">
+                                    <h3 class="text">Да...на двадцать минут</h3>
+                                    <h3 class="text">Проблема не у нас</h3>
+                                    <h3 class="text">Хорошо, что есть RSS</h3>
+                                    <h3 class="text">Это Java Script!</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+            </article>        
 	</div>
 </body>
 </html>
