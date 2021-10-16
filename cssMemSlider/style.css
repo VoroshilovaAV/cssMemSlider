@@ -13,25 +13,100 @@ body {
   background-image: url(assets/img/back.jpg);
 }
 
-.container {
-    height: 60em;
-	margin: 300px auto 0;
-	position: calc(100% - 50px);
-	width: 95em;
-}
-
-.cards_slider {
-	background-color: #ddd;
-	height: inherit;
-	overflow: hidden;
-	position: relative;
-	width: inherit;   
-	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-}
-
-.container > input {
+.container input{ 
 	display: none;
+}
+
+/*slider position*/
+#cards_slider { 
+    position: relative;
+	text-align: center;
+    top: 70em;
+    margin: 0 auto;       
+}
+
+/*position of the pictures from each other*/
+#slides article{ 
+	width: 20%;
+	float: left;
+}
+
+/*total block size with images*/
+#slides .image{ 
+	width: 850em;
+	line-height: 0;
+}
+
+
+#overflow{ 
+	width: 170em;
+	overflow: hidden;
+}
+
+article img{ 
+	width: 170em;
+}
+
+#size:checked ~ #cards_slider{ 
+	max-width: 170em; 
+}
+
+label, a{ 
+	cursor: pointer;
+}
+
+/*picture position when the switch is activated*/
+#point1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#point2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#point3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#point4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#point5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#active label{	
+    border-radius: 50%; 
+	display: inline-block; 
+	width: 4em;
+	height: 4em;
+    margin-right: 1em;
+	background: rgb(150, 145, 145);
+}
+
+/* location of the block with switches */
+#active{ 
+	margin: 3% 0 0 87.7%;
+	text-align: center;
+}
+
+#active label:hover{ 
+	background: #d476ff;
+	border-color: #777 !important; 
+}
+
+/*the color of the active label when he is activated*/
+#point1:checked ~ #active label:nth-child(1),
+#point2:checked ~ #active label:nth-child(2),
+#point3:checked ~ #active label:nth-child(3),
+#point4:checked ~ #active label:nth-child(4),
+#point5:checked ~ #active label:nth-child(5){
+	background: #d476ff;
+	border-color: #d476ff !important;
+}
+
+/*animation*/
+#slides .image{ 
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
