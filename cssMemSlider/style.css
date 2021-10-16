@@ -13,87 +13,87 @@ body {
   background-image: url(assets/img/back.jpg);
 }
 
-.container input{ 
-	display: none;
+.container input {
+  display: none;
 }
 
 /*slider position*/
-#cards_slider { 
-    position: relative;
-	text-align: center;
-    top: 70em;
-    margin: 0 auto;       
+#cards_slider {
+  position: relative;
+  text-align: center;
+  top: 10em;
+  margin: 0 auto;
 }
 
 /*position of the pictures from each other*/
-#slides article{ 
-	width: 20%;
-	float: left;
+#slides article {
+  width: 20%;
+  float: left;
 }
 
 /*total block size with images*/
-#slides .image{ 
-	width: 850em;
-	line-height: 0;
+#slides .image {
+  width: 350em;
+  line-height: 0;
 }
 
-
-#overflow{ 
-	width: 170em;
-	overflow: hidden;
+#overflow {
+  width: 70em;
+  overflow: hidden;
 }
 
-article img{ 
-	width: 170em;
+article img {
+  width: 70em;
 }
 
-#size:checked ~ #cards_slider{ 
-	max-width: 170em; 
+#size:checked ~ #cards_slider {
+  max-width: 70em;
 }
 
-label, a{ 
-	cursor: pointer;
+label,
+a {
+  cursor: pointer;
 }
 
 /*picture position when the switch is activated*/
-#point1:checked ~ #slides .image{
-	margin-left: 0;
+#point1:checked ~ #slides .image {
+  margin-left: 0;
 }
 
-#point2:checked ~ #slides .image{
-	margin-left: -100%;
+#point2:checked ~ #slides .image {
+  margin-left: -100%;
 }
 
-#point3:checked ~ #slides .image{
-	margin-left: -200%;
+#point3:checked ~ #slides .image {
+  margin-left: -200%;
 }
 
-#point4:checked ~ #slides .image{
-	margin-left: -300%;
+#point4:checked ~ #slides .image {
+  margin-left: -300%;
 }
 
-#point5:checked ~ #slides .image{
-	margin-left: -400%;
+#point5:checked ~ #slides .image {
+  margin-left: -400%;
 }
 
-#active label{	
-    border-radius: 50%; 
-	display: inline-block; 
-	width: 4em;
-	height: 4em;
-    margin-right: 1em;
-	background: rgb(150, 145, 145);
+#active label {
+  border-radius: 50%;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.3em;
+  background: rgb(150, 145, 145);
 }
 
 /* location of the block with switches */
-#active{ 
-	margin: 3% 0 0 87.7%;
-	text-align: center;
+#active {
+  margin: 3% 0 0 90%;
+  text-align: center;
 }
 
-#active label:hover{ 
-	background: #d476ff;
-	border-color: #777 !important; 
+#active label:hover {
+  background: #d476ff;
+  border-color: #777 !important;
 }
 
 /*the color of the active label when he is activated*/
@@ -101,12 +101,12 @@ label, a{
 #point2:checked ~ #active label:nth-child(2),
 #point3:checked ~ #active label:nth-child(3),
 #point4:checked ~ #active label:nth-child(4),
-#point5:checked ~ #active label:nth-child(5){
-	background: #d476ff;
-	border-color: #d476ff !important;
+#point5:checked ~ #active label:nth-child(5) {
+  background: #d476ff;
+  border-color: #d476ff !important;
 }
 
 /*animation*/
-#slides .image{ 
-	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+#slides .image {
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 }
